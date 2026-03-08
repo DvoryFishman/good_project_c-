@@ -1,0 +1,18 @@
+﻿
+namespace DO;
+
+
+public class DalIdNotFoundException : Exception
+{
+    public DalIdNotFoundException() : base("id not found exception") { }
+    public DalIdNotFoundException(string? message) : base(message) { }
+    public DalIdNotFoundException(string? message, Exception? inner) : base(message, inner) { }
+}
+public class DalIdAlredyExsistException : Exception
+{
+    public DalIdAlredyExsistException() : base("id already exists") { }
+    public DalIdAlredyExsistException(string? message) : base(message) { }
+    public DalIdAlredyExsistException(string? message, Exception? inner) : base(message, inner) { }
+}
+
+

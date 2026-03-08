@@ -1,0 +1,48 @@
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.csproj.AssemblyReference.cache
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.GeneratedMSBuildEditorConfig.editorconfig
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.AssemblyInfoInputs.cache
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.AssemblyInfo.cs
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.csproj.CoreCompileInputs.cache
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\bin\DalTest1.exe
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\bin\DalTest1.deps.json
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\bin\DalTest1.runtimeconfig.json
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\bin\DalTest1.dll
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\bin\DalTest1.pdb
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.csproj.Up2Date
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.dll
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\refint\DalTest1.dll
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.pdb
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.genruntimeconfig.cache
+Z:\יד תשפו\קראוס יעל\c#\גיבוי\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\ref\DalTest1.dll
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\bin\DalTest1.exe
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\bin\DalTest1.deps.json
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\bin\DalTest1.runtimeconfig.json
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\bin\DalTest1.dll
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\bin\DalTest1.pdb
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.csproj.AssemblyReference.cache
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.GeneratedMSBuildEditorConfig.editorconfig
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.AssemblyInfoInputs.cache
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.AssemblyInfo.cs
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.csproj.CoreCompileInputs.cache
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.csproj.Up2Date
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.dll
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\refint\DalTest1.dll
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.pdb
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.genruntimeconfig.cache
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\ref\DalTest1.dll
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\bin\DalTest1.exe
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\bin\DalTest1.deps.json
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\bin\DalTest1.runtimeconfig.json
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\bin\DalTest1.dll
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\bin\DalTest1.pdb
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.csproj.AssemblyReference.cache
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.AssemblyInfoInputs.cache
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.AssemblyInfo.cs
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.csproj.CoreCompileInputs.cache
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.csproj.Up2Date
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.dll
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\refint\DalTest1.dll
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.pdb
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\DalTest1.genruntimeconfig.cache
+Z:\Handasa\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\DotNet2026_1314_4462\DalTest1\obj\Debug\ref\DalTest1.dll

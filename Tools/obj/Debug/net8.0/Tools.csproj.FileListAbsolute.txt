@@ -1,0 +1,11 @@
+C:\דבורי\שנה ב\c#\מהמורה\גיבוי 2\project_good\DotNet2026_1314_4462\Tools\bin\Debug\net8.0\Tools.deps.json
+C:\דבורי\שנה ב\c#\מהמורה\גיבוי 2\project_good\DotNet2026_1314_4462\Tools\bin\Debug\net8.0\Tools.dll
+C:\דבורי\שנה ב\c#\מהמורה\גיבוי 2\project_good\DotNet2026_1314_4462\Tools\bin\Debug\net8.0\Tools.pdb
+C:\דבורי\שנה ב\c#\מהמורה\גיבוי 2\project_good\DotNet2026_1314_4462\Tools\obj\Debug\net8.0\Tools.GeneratedMSBuildEditorConfig.editorconfig
+C:\דבורי\שנה ב\c#\מהמורה\גיבוי 2\project_good\DotNet2026_1314_4462\Tools\obj\Debug\net8.0\Tools.AssemblyInfoInputs.cache
+C:\דבורי\שנה ב\c#\מהמורה\גיבוי 2\project_good\DotNet2026_1314_4462\Tools\obj\Debug\net8.0\Tools.AssemblyInfo.cs
+C:\דבורי\שנה ב\c#\מהמורה\גיבוי 2\project_good\DotNet2026_1314_4462\Tools\obj\Debug\net8.0\Tools.csproj.CoreCompileInputs.cache
+C:\דבורי\שנה ב\c#\מהמורה\גיבוי 2\project_good\DotNet2026_1314_4462\Tools\obj\Debug\net8.0\Tools.dll
+C:\דבורי\שנה ב\c#\מהמורה\גיבוי 2\project_good\DotNet2026_1314_4462\Tools\obj\Debug\net8.0\refint\Tools.dll
+C:\דבורי\שנה ב\c#\מהמורה\גיבוי 2\project_good\DotNet2026_1314_4462\Tools\obj\Debug\net8.0\Tools.pdb
+C:\דבורי\שנה ב\c#\מהמורה\גיבוי 2\project_good\DotNet2026_1314_4462\Tools\obj\Debug\net8.0\ref\Tools.dll

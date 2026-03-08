@@ -1,0 +1,26 @@
+﻿using System;
+using System.Runtime.Serialization;
+
+namespace DO;
+
+[Serializable]
+public class IdNotFoundException : Exception
+{
+    public IdNotFoundException() : base("id not found exception") { }
+    public IdNotFoundException(string? message) : base(message) { }
+    public IdNotFoundException(string? message, Exception? inner) : base(message, inner) { }
+    protected IdNotFoundException(SerializationInfo info, StreamingContext context) : base(info, context) { }
+}
+
+[Serializable]
+public class IdAlreadyExistsException : Exception
+{
+    public IdAlreadyExistsException() : base("id already exists") { }
+    public IdAlreadyExistsException(string? message) : base(message) { }
+    public IdAlreadyExistsException(string? message, Exception? inner) : base(message, inner) { }
+    protected IdAlreadyExistsException(SerializationInfo info, StreamingContext context) : base(info, context) { }
+}
+
+
+
+        

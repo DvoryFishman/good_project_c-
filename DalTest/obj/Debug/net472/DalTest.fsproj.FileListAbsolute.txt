@@ -1,0 +1,4 @@
+Z:\יד תשפו\קראוס יעל\c#\project_good\DotNet2026_1314_4462\DalTest\obj\Debug\net472\DalTest.fsproj.AssemblyReference.cache
+Z:\יד תשפו\קראוס יעל\c#\project_good\DotNet2026_1314_4462\DalTest\obj\Debug\net472\DalTest.AssemblyInfoInputs.cache
+Z:\יד תשפו\קראוס יעל\c#\project_good\DotNet2026_1314_4462\DalTest\obj\Debug\net472\DalTest.AssemblyInfo.fs
+Z:\יד תשפו\קראוס יעל\c#\project_good\DotNet2026_1314_4462\DalTest\obj\Debug\net472\DalTest.fsproj.CoreCompileInputs.cache
