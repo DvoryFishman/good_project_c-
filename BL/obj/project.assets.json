@@ -1,10 +1,10 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
+    "net9.0": {
       "DalFacade/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
           "bin/placeholder/DalFacade.dll": {}
         },
@@ -14,12 +14,26 @@
       },
       "DalList/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DalFacade": "1.0.0",
+          "Tools": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/DalList.dll": {}
         },
         "runtime": {
           "bin/placeholder/DalList.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
         }
       }
     }
@@ -34,10 +48,15 @@
       "type": "project",
       "path": "../DalList/DalList.csproj",
       "msbuildProject": "../DalList/DalList.csproj"
+    },
+    "Tools/1.0.0": {
+      "type": "project",
+      "path": "../Tools/Tools.csproj",
+      "msbuildProject": "../Tools/Tools.csproj"
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
+    "net9.0": [
       "DalFacade >= 1.0.0",
       "DalList >= 1.0.0"
     ]
@@ -64,7 +83,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net9.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -72,8 +91,8 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "projectReferences": {
             "C:\\דבורי\\שנה ב\\c#\\מהמורה\\גיבוי 2\\project_good\\DotNet2026_1314_4462\\DalFacade\\DalFacade.csproj": {
               "projectPath": "C:\\דבורי\\שנה ב\\c#\\מהמורה\\גיבוי 2\\project_good\\DotNet2026_1314_4462\\DalFacade\\DalFacade.csproj"
@@ -96,8 +115,8 @@
       }
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net9.0": {
+        "targetAlias": "net9.0",
         "imports": [
           "net461",
           "net462",
@@ -109,33 +128,8 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project DalList is not compatible with net8.0 (.NETCoreApp,Version=v8.0). Project DalList supports: net9.0 (.NETCoreApp,Version=v9.0)",
-      "libraryId": "DalList",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project DalFacade is not compatible with net8.0 (.NETCoreApp,Version=v8.0). Project DalFacade supports: net9.0 (.NETCoreApp,Version=v9.0)",
-      "libraryId": "DalFacade",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }
