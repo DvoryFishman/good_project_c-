@@ -30,17 +30,17 @@ public class Program
         }
         catch (IdAlreadyExistsException e)
         {
-            Tools.LogManager.writeToLog(getPathCurrentFile(), initilize, e.message);
+            Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "initilize", e.Message);
             Console.WriteLine(e.Message);
         }
         catch (IdNotFoundException e)
         {
-            Tools.LogManager.writeToLog(getPathCurrentFile(), initilize, e.message);
+            Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "initilize", e.Message);
             Console.WriteLine(e.Message);
         }
         catch (Exception e)
         {
-            Tools.LogManager.writeToLog(getPathCurrentFile(), initilize, e.message);
+            Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "initilize", e.Message);
             Console.WriteLine(e.Message);
         }
 
@@ -57,25 +57,25 @@ public class Program
                     case 1: userCustomer(s_dal.Customer); break;
                     case 2: userSalies(s_dal.Salies); break;
                     case 3: userProduct(s_dal.Product); break;
-                    case 4: CleanOldLogs(); break;
+                    case 4: Tools.LogManager.CleanOldLogs(); break;
                     case 5: break;
                 }
             } while (num != 5);
         }
         catch (IdAlreadyExistsException e)
         {
-            Tools.LogManager.writeToLog(getPathCurrentFile(), inTheKey, e.message);
+            Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "inTheKey", e.Message);
             Console.WriteLine(e.Message);
         }
         catch (IdNotFoundException e)
         {
-            Tools.LogManager.writeToLog(getPathCurrentFile(), inTheKey, e.message);
+            Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "inTheKey", e.Message);
 
             Console.WriteLine(e.Message);
         }
         catch (Exception e)
         {
-            Tools.LogManager.writeToLog(getPathCurrentFile(), inTheKey, e.message);
+            Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "inTheKey", e.Message);
             Console.WriteLine(e.Message);
 
         }

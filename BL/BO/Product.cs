@@ -13,10 +13,11 @@ namespace BL.BO
         string Category,
         double Price,
         int QuantityInStock,
-        list<SaleInProduct> SaleInProducts = new list<SaleInProduct>())
+        List<SaleInProduct> SaleInProducts = new List<SaleInProduct>()
+    )
     {
 
-        public Product() : this(0, "shoose", 10, 10, list < SaleInProduct > SaleInProducts = null)
+        public Product() : this(0, "shoose", 10, 10, null)
         {
 
 

@@ -18,54 +18,54 @@ public class SaliesImplementation : ISalies
         //int id = Config.StaticValue;
         //sale = item with { Id = id };
         //return item.Id;
-        Tools.LogManager.writeToLog(getPathCurrentFile(), Create, "start");
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "start");
         Salies sale;
         int id = Config.StaticValue;
         sale = item with { SaleId = id };
         salies.Add(sale);
-        Tools.LogManager.writeToLog(getPathCurrentFile(), Create, "end");
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "end");
         return id;
 
     }
 
     public Salies? Read(Func<Salies, bool>? filter)
     {
-        Tools.LogManager.writeToLog(getPathCurrentFile(), Read, "start");
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "start");
         var q = from c in salies
                 where filter != null && filter(c)
                 select c;
         Salies? c1 = q.FirstOrDefault();
         if (c1 == null)
             throw new IdNotFoundException();
-        Tools.LogManager.writeToLog(getPathCurrentFile(), Read, "end");
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "end");
         return c1;
 
     }
     public List<Salies> ReadAll(Func<Salies, bool>? filter = null)
     {
-        Tools.LogManager.writeToLog(getPathCurrentFile(), ReadAll, "start");
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "start");
         var q = from c in salies
                 where filter != null && filter(c)
-                select c;
-        Tools.LogManager.writeToLog(getPathCurrentFile(), ReadAll, "end");
+                select c;   
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "end");
         return q.ToList();
     }
     public Salies? Read()
     {
-        Tools.LogManager.writeToLog(getPathCurrentFile(), Read, "start");
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "start");
         var q = from c in salies
                 where c != null
                 select c;
         Salies? c1 = q.FirstOrDefault();
         if (c1 == null)
             throw new IdNotFoundException();
-        Tools.LogManager.writeToLog(getPathCurrentFile(), Read, "end");
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "end");
         return c1;
 
     }
     public void Update(Salies item)
     {
-        Tools.LogManager.writeToLog(getPathCurrentFile(), Update, "start");
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "start");
         var q = from c in salies
                 where item.Id == c.Id
                 select c;
@@ -75,11 +75,11 @@ public class SaliesImplementation : ISalies
             throw new IdNotFoundException();
         Delete(s.Id);
         Create(item);
-        Tools.LogManager.writeToLog(getPathCurrentFile(), Update, "end");
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "end");
     }
     public void Delete(int id)
     {
-        Tools.LogManager.writeToLog(getPathCurrentFile(), Delete, "start");
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "start");
         var q = from c in salies
                 where c.Id == id
                 select c;
@@ -87,7 +87,7 @@ public class SaliesImplementation : ISalies
         if (s == null)
             throw new IdNotFoundException();
         salies.Remove(s);
-        Tools.LogManager.writeToLog(getPathCurrentFile(), Delete, "end");
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "end");
     }
 
 }

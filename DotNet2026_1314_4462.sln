@@ -13,12 +13,18 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tools", "Tools\Tools.csproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xml", "xml", "{749A0DDE-B3D5-4FF0-A4E6-6551AD93D4D6}"
 	ProjectSection(SolutionItems) = preProject
+		xml\customer.xml = xml\customer.xml
 		xml\dal-config.xml = xml\dal-config.xml
+		xml\data-config.xml = xml\data-config.xml
+		xml\products.xml = xml\products.xml
+		xml\salies.xml = xml\salies.xml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{12FAE5DA-3BD9-456E-AD9C-2E22D0D53B26}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlTest", "BlTest\BlTest.csproj", "{96C1EA91-3E50-48A6-8D7C-A7E2341205DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalXml2", "DalXml\DalXml2.csproj", "{03106D06-1430-4033-BECF-FCC4AE0ED0F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -102,6 +108,18 @@ Global
 		{96C1EA91-3E50-48A6-8D7C-A7E2341205DF}.Release|x64.Build.0 = Release|Any CPU
 		{96C1EA91-3E50-48A6-8D7C-A7E2341205DF}.Release|x86.ActiveCfg = Release|Any CPU
 		{96C1EA91-3E50-48A6-8D7C-A7E2341205DF}.Release|x86.Build.0 = Release|Any CPU
+		{03106D06-1430-4033-BECF-FCC4AE0ED0F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03106D06-1430-4033-BECF-FCC4AE0ED0F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03106D06-1430-4033-BECF-FCC4AE0ED0F9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{03106D06-1430-4033-BECF-FCC4AE0ED0F9}.Debug|x64.Build.0 = Debug|Any CPU
+		{03106D06-1430-4033-BECF-FCC4AE0ED0F9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{03106D06-1430-4033-BECF-FCC4AE0ED0F9}.Debug|x86.Build.0 = Debug|Any CPU
+		{03106D06-1430-4033-BECF-FCC4AE0ED0F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03106D06-1430-4033-BECF-FCC4AE0ED0F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03106D06-1430-4033-BECF-FCC4AE0ED0F9}.Release|x64.ActiveCfg = Release|Any CPU
+		{03106D06-1430-4033-BECF-FCC4AE0ED0F9}.Release|x64.Build.0 = Release|Any CPU
+		{03106D06-1430-4033-BECF-FCC4AE0ED0F9}.Release|x86.ActiveCfg = Release|Any CPU
+		{03106D06-1430-4033-BECF-FCC4AE0ED0F9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

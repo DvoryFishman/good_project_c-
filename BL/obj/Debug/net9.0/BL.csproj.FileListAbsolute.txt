@@ -1,0 +1,6 @@
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\good_project_c-\BL\obj\Debug\net9.0\BL.csproj.AssemblyReference.cache
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\good_project_c-\BL\obj\Debug\net9.0\BL.GeneratedMSBuildEditorConfig.editorconfig
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\good_project_c-\BL\obj\Debug\net9.0\BL.AssemblyInfoInputs.cache
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\good_project_c-\BL\obj\Debug\net9.0\BL.AssemblyInfo.cs
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\good_project_c-\BL\obj\Debug\net9.0\BL.csproj.CoreCompileInputs.cache
+Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\good_project_c-\BL\obj\Debug\net9.0\BL.sourcelink.json

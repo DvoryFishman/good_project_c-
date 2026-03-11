@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BL.BlApi
 {
-    public interface ICrud
+    public interface ICrud<T>
     {
         int Create(T item); //Creates new entity object in DAL
         T? Read(); //stage 2 

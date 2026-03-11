@@ -9,7 +9,7 @@ namespace BL.BO
     public class Order
     {
         bool favorite;
-        list<ProductInOrder> ProductInOrders = new list<ProductInOrder>();
+        List<ProductInOrder> ProductInOrders = new List<ProductInOrder>();
         double finalPriceInOrder;
         public override string ToString() => this.ToStringProperty();
     
