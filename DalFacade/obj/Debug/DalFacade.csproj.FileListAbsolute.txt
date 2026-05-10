@@ -47,3 +47,27 @@ Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\good_project_c-\
 Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\good_project_c-\DalFacade\obj\Debug\refint\DalFacade.dll
 Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\good_project_c-\DalFacade\obj\Debug\DalFacade.pdb
 Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\good_project_c-\DalFacade\obj\Debug\ref\DalFacade.dll
+C:\דבורי\שנה ב\c#\good_project_c-\bin\DalFacade.deps.json
+C:\דבורי\שנה ב\c#\good_project_c-\bin\DalFacade.dll
+C:\דבורי\שנה ב\c#\good_project_c-\bin\DalFacade.pdb
+C:\דבורי\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\DalFacade.GeneratedMSBuildEditorConfig.editorconfig
+C:\דבורי\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\DalFacade.AssemblyInfoInputs.cache
+C:\דבורי\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\DalFacade.AssemblyInfo.cs
+C:\דבורי\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\DalFacade.csproj.CoreCompileInputs.cache
+C:\דבורי\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\DalFacade.sourcelink.json
+C:\דבורי\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\DalFacade.dll
+C:\דבורי\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\refint\DalFacade.dll
+C:\דבורי\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\DalFacade.pdb
+C:\דבורי\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\ref\DalFacade.dll
+C:\יעל\שנה ב\c#\good_project_c-\bin\DalFacade.deps.json
+C:\יעל\שנה ב\c#\good_project_c-\bin\DalFacade.dll
+C:\יעל\שנה ב\c#\good_project_c-\bin\DalFacade.pdb
+C:\יעל\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\DalFacade.GeneratedMSBuildEditorConfig.editorconfig
+C:\יעל\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\DalFacade.AssemblyInfoInputs.cache
+C:\יעל\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\DalFacade.AssemblyInfo.cs
+C:\יעל\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\DalFacade.csproj.CoreCompileInputs.cache
+C:\יעל\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\DalFacade.sourcelink.json
+C:\יעל\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\DalFacade.dll
+C:\יעל\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\refint\DalFacade.dll
+C:\יעל\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\DalFacade.pdb
+C:\יעל\שנה ב\c#\good_project_c-\DalFacade\obj\Debug\ref\DalFacade.dll

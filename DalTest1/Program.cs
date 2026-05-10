@@ -23,27 +23,35 @@ public class Program
     {
         Func<Customer, bool> del1;
         del1 = Sum;
-   
-        try
-        {
-            Initialization.initilize();
-        }
-        catch (IdAlreadyExistsException e)
-        {
-            Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "initilize", e.Message);
-            Console.WriteLine(e.Message);
-        }
-        catch (IdNotFoundException e)
-        {
-            Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "initilize", e.Message);
-            Console.WriteLine(e.Message);
-        }
-        catch (Exception e)
-        {
-            Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "initilize", e.Message);
-            Console.WriteLine(e.Message);
-        }
+        Console.WriteLine("Do you want to initialize data? (y/n)");
+        string ans = Console.ReadLine();
 
+        if (ans == "y")
+        {
+            try
+            {
+                Initialization.initilize();
+            }
+            catch (IdAlreadyExistsException e)
+            {
+                Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "initilize", e.Message);
+                Console.WriteLine(e.Message);
+            }
+            catch (IdNotFoundException e)
+            {
+                Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "initilize", e.Message);
+                Console.WriteLine(e.Message);
+            }
+            catch (Exception e)
+            {
+                Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "initilize", e.Message);
+                Console.WriteLine(e.Message);
+            }
+        }
+        else
+        {
+            Console.WriteLine("Skipping initialization, using existing XML data.");
+        }
 
         int num = 0;
         try

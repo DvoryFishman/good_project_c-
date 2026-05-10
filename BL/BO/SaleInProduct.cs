@@ -6,12 +6,25 @@ using System.Threading.Tasks;
 
 namespace BL.BO
 {
-    internal class SaleInProduct
+    public class SaleInProduct
     {
-        int SaleId;
-        int AmountInSale;
-        double Price;
-        bool IsToAllCustomer;
+        public int SaleId { get; set; }
+        public double SalePrice { get; set; }
+        public int AmountNeeded { get; set; }
+
+        public SaleInProduct()
+        {
+            SaleId = -1;
+            SalePrice = 0.0;
+            AmountNeeded = 0;
+        }
+
+        public SaleInProduct(int saleId, double salePrice, int amountNeeded)
+        {
+            SaleId = saleId;
+            SalePrice = salePrice;
+            AmountNeeded = amountNeeded;
+        }
 
         public override string ToString() => this.ToStringProperty();
     }

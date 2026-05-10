@@ -19,10 +19,10 @@ namespace Dal
         {
             Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "start");
             fileXml.Element(CUSTOMER).Elements()
-                .add(new XElement(CUSTOMERID,item.id),
-                new XElement(NAME,item.name), 
-                new XElement(ADDRESS,item.adress),
-                new XElement(PHONE,item.phone))
+                .add(new XElement(CUSTOMERID, item.id),
+                new XElement(NAME, item.name),
+                new XElement(ADDRESS, item.adress),
+                new XElement(PHONE, item.phone));
                 fileXml.Save();
             Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "end");
             return ;

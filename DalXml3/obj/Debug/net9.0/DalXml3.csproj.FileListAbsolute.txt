@@ -1,0 +1,6 @@
+C:\יעל\שנה ב\c#\good_project_c-\DalXml3\obj\Debug\net9.0\DalXml3.csproj.AssemblyReference.cache
+C:\יעל\שנה ב\c#\good_project_c-\DalXml3\obj\Debug\net9.0\DalXml3.GeneratedMSBuildEditorConfig.editorconfig
+C:\יעל\שנה ב\c#\good_project_c-\DalXml3\obj\Debug\net9.0\DalXml3.AssemblyInfoInputs.cache
+C:\יעל\שנה ב\c#\good_project_c-\DalXml3\obj\Debug\net9.0\DalXml3.AssemblyInfo.cs
+C:\יעל\שנה ב\c#\good_project_c-\DalXml3\obj\Debug\net9.0\DalXml3.csproj.CoreCompileInputs.cache
+C:\יעל\שנה ב\c#\good_project_c-\DalXml3\obj\Debug\net9.0\DalXml3.sourcelink.json

@@ -1,0 +1,163 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0-windows7.0": {
+      "BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DalFacade": "1.0.0",
+          "DalList": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BL.dll": {}
+        }
+      },
+      "DalFacade/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/DalFacade.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DalFacade.dll": {}
+        }
+      },
+      "DalList/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DalFacade": "1.0.0",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DalList.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DalList.dll": {}
+        }
+      },
+      "Tools/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Tools.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tools.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BL/1.0.0": {
+      "type": "project",
+      "path": "../BL/BL.csproj",
+      "msbuildProject": "../BL/BL.csproj"
+    },
+    "DalFacade/1.0.0": {
+      "type": "project",
+      "path": "../DalFacade/DalFacade.csproj",
+      "msbuildProject": "../DalFacade/DalFacade.csproj"
+    },
+    "DalList/1.0.0": {
+      "type": "project",
+      "path": "../DalList/DalList.csproj",
+      "msbuildProject": "../DalList/DalList.csproj"
+    },
+    "Tools/1.0.0": {
+      "type": "project",
+      "path": "../Tools/Tools.csproj",
+      "msbuildProject": "../Tools/Tools.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0-windows7.0": [
+      "BL >= 1.0.0",
+      "DalList >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\user\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\UI\\UI.csproj",
+      "projectName": "UI",
+      "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\UI\\UI.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\UI\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
+          "projectReferences": {
+            "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BL\\BL.csproj": {
+              "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BL\\BL.csproj"
+            },
+            "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalList\\DalList.csproj": {
+              "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalList\\DalList.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net9.0-windows7.0": {
+        "targetAlias": "net9.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

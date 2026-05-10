@@ -2,6 +2,20 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DalFacade": "1.0.0",
+          "DalList": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BL.dll": {}
+        }
+      },
       "DalFacade/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -26,6 +40,20 @@
           "bin/placeholder/DalList.dll": {}
         }
       },
+      "DalXml3/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DalFacade": "1.0.0",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DalXml3.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DalXml3.dll": {}
+        }
+      },
       "Tools/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -39,6 +67,11 @@
     }
   },
   "libraries": {
+    "BL/1.0.0": {
+      "type": "project",
+      "path": "../BL/BL.csproj",
+      "msbuildProject": "../BL/BL.csproj"
+    },
     "DalFacade/1.0.0": {
       "type": "project",
       "path": "../DalFacade/DalFacade.csproj",
@@ -49,6 +82,11 @@
       "path": "../DalList/DalList.csproj",
       "msbuildProject": "../DalList/DalList.csproj"
     },
+    "DalXml3/1.0.0": {
+      "type": "project",
+      "path": "../DalXml3/DalXml3.csproj",
+      "msbuildProject": "../DalXml3/DalXml3.csproj"
+    },
     "Tools/1.0.0": {
       "type": "project",
       "path": "../Tools/Tools.csproj",
@@ -57,29 +95,31 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "BL >= 1.0.0",
       "DalFacade >= 1.0.0",
       "DalList >= 1.0.0",
+      "DalXml3 >= 1.0.0",
       "Tools >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\huser\\.nuget\\packages\\": {},
+    "C:\\Users\\user\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\יד תשפו\\קראוס יעל\\c#\\גיבוי 2\\project_good\\good_project_c-\\DalTest1\\DalTest1.csproj",
+      "projectUniqueName": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalTest1\\DalTest1.csproj",
       "projectName": "DalTest1",
-      "projectPath": "Z:\\יד תשפו\\קראוס יעל\\c#\\גיבוי 2\\project_good\\good_project_c-\\DalTest1\\DalTest1.csproj",
-      "packagesPath": "C:\\Users\\huser\\.nuget\\packages\\",
-      "outputPath": "Z:\\יד תשפו\\קראוס יעל\\c#\\גיבוי 2\\project_good\\good_project_c-\\DalTest1\\obj\\",
+      "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalTest1\\DalTest1.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalTest1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\huser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -87,21 +127,28 @@
         "net9.0"
       ],
       "sources": {
-        "c:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "Z:\\יד תשפו\\קראוס יעל\\c#\\גיבוי 2\\project_good\\good_project_c-\\DalFacade\\DalFacade.csproj": {
-              "projectPath": "Z:\\יד תשפו\\קראוס יעל\\c#\\גיבוי 2\\project_good\\good_project_c-\\DalFacade\\DalFacade.csproj"
+            "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BL\\BL.csproj": {
+              "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BL\\BL.csproj"
             },
-            "Z:\\יד תשפו\\קראוס יעל\\c#\\גיבוי 2\\project_good\\good_project_c-\\DalList\\DalList.csproj": {
-              "projectPath": "Z:\\יד תשפו\\קראוס יעל\\c#\\גיבוי 2\\project_good\\good_project_c-\\DalList\\DalList.csproj"
+            "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalFacade\\DalFacade.csproj": {
+              "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalFacade\\DalFacade.csproj"
             },
-            "Z:\\יד תשפו\\קראוס יעל\\c#\\גיבוי 2\\project_good\\good_project_c-\\Tools\\Tools.csproj": {
-              "projectPath": "Z:\\יד תשפו\\קראוס יעל\\c#\\גיבוי 2\\project_good\\good_project_c-\\Tools\\Tools.csproj"
+            "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalList\\DalList.csproj": {
+              "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalList\\DalList.csproj"
+            },
+            "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalXml3\\DalXml3.csproj": {
+              "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalXml3\\DalXml3.csproj"
+            },
+            "C:\\יעל\\שנה ב\\c#\\good_project_c-\\Tools\\Tools.csproj": {
+              "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\Tools\\Tools.csproj"
             }
           }
         }
@@ -137,7 +184,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "c:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.313/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -6,25 +6,23 @@ using System.Threading.Tasks;
 
 namespace BL.BO
 {
-
-
-    public record Product
-    (   int ProductId,
-        string Category,
-        double Price,
-        int QuantityInStock,
-        List<SaleInProduct> SaleInProducts = new List<SaleInProduct>()
-    )
+    public class Product
     {
+        public int ProductId { get; init; }
+        public double Price { get; set; }
+        public Category Category { get; set; }
+        public int QuantityInStock { get; set; }
 
-        public Product() : this(0, "shoose", 10, 10, null)
+        public Product() : this(-1, 0.0, Category.SHOOSE, 0) { }
+
+        public Product(int id, double price, Category category, int quantityInStock)
         {
-
-
+            ProductId = id;
+            Price = price;
+            Category = category;
+            QuantityInStock = quantityInStock;
         }
+
         public override string ToString() => this.ToStringProperty();
     }
-
-
-
 }

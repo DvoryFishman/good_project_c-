@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
@@ -14,8 +14,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\BL\BL.csproj" />
 		<ProjectReference Include="..\DalFacade\DalFacade.csproj" />
 		<ProjectReference Include="..\DalList\DalList.csproj" />
+		<ProjectReference Include="..\DalXml3\DalXml3.csproj" />
 		<ProjectReference Include="..\Tools\Tools.csproj" />
 	</ItemGroup>
 

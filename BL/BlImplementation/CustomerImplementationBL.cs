@@ -1,81 +1,105 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-//using DO;
-//namespace BL.BlImplementation;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using DO;
+using BL.BO;
 
-//internal class CustomerImplementationBL : IBl<Customer>
-//{
+namespace BL.BlImplementation;
 
-//    private DalApi.IDal _dal = DalApi.Factory.Get; // הפניה לשכבת ה-DAL
+internal class CustomerImplementationBL : BL.BlApi.ICustomer
+{
+    private DalApi.IDal _dal = DalApi.Factory.Get;
 
-//    public CustomerImplementationBL(ICustomer customerDAL)
-//    {
-//        _dal = customerDAL;
-//    }
+    public CustomerImplementationBL(DalApi.IDal customerDAL)
+    {
+        _dal = customerDAL;
+    }
 
-//    public int Create(BO.Customer item)
-//    {
-//        Customer customerDO = new Customer
-//        {
-//            CustomerId = item.CustomerId,
-//            Name = item.Name,
-//            Adress = item.Adress,
-//            Phone = item.Phone
-//        };
+    public BL.BO.Customer Create(BL.BO.Customer item)
+    {
+        try
+        {
+            var customerDO = BL.BO.Tools.ToDataObject(item);
+            var createdDO = _dal.Customer.Create(customerDO);
+            var result = _dal.Customer.Read(x => x.CustomerId == createdDO);
+            return BL.BO.Tools.ToBO(result);
+        }
+        catch (DO.IdAlreadyExistsException e)
+        {
+            throw new BL.BO.BlAlreadyExistsException("customer already exists", e);
+        }
+        catch (DO.IdNotFoundException e)
+        {
+            throw new BL.BO.BlNotFoundException("error creating customer", e);
+        }
+    }
 
-//        return _dal.Create(customerDO);
-//    }
+    public BL.BO.Customer? Read(Func<BL.BO.Customer, bool> filter)
+    {
+        try
+        {
+            var customer = _dal.Customer.ReadAll(x => true).Select(s => BL.BO.Tools.ToBO(s)).FirstOrDefault(filter);
+            return customer;
+        }
+        catch (DO.IdNotFoundException e)
+        {
+            throw new BL.BO.BlNotFoundException("error reading customer", e);
+        }
+    }
 
-//    public DO.Customer? Read(int id)
-//    {
-//        Customer? customerDO = _customerDAL.Read(id);
-//        return customerDO != null ? new Customer
-//        {
-//            CustomerId = customerDO.CustomerId,
-//            Name = customerDO.Name,
-//            Adress = customerDO.Adress,
-//            Phone = customerDO.Phone
-//        } : null;
-//    }
+    public List<BL.BO.Customer> ReadAll(Func<BL.BO.Customer, bool>? filter = null)
+    {
+        try
+        {
+            var customersDO = _dal.Customer.ReadAll();
+            var customersBO = from customer in customersDO
+                              let cb = BL.BO.Tools.ToBO(customer)
+                              where filter == null || filter(cb)
+                              select cb;
+            return customersBO.ToList();
+        }
+        catch (DO.IdNotFoundException e)
+        {
+            throw new BL.BO.BlNotFoundException("error reading customers", e);
+        }
+    }
 
-//    public Customer? Read(Func<Customer, bool>? filter)
-//    {
-//        var allCustomers = ReadAll();
-//        return filter != null ? allCustomers.FirstOrDefault(filter) : null;
-//    }
+    public void Update(BL.BO.Customer item)
+    {
+        try
+        {
+            var customer = BL.BO.Tools.ToDataObject(item);
+            _dal.Customer.Update(customer);
+        }
+        catch (DO.IdNotFoundException e)
+        {
+            throw new BL.BO.BlNotFoundException("error updating customer", e);
+        }
+    }
 
-//    public List<Customer> ReadAll(Func<Customer, bool>? filter = null)
-//    {
-//        var customersDO = _customerDAL.ReadAll();
-//        var customersBO = customersDO.Select(customerDO => new Customer
-//        {
-//            CustomerId = customerDO.CustomerId,
-//            Name = customerDO.Name,
-//            Adress = customerDO.Adress,
-//            Phone = customerDO.Phone
-//        }).ToList();
+    public void Delete(int id)
+    {
+        try
+        {
+            _dal.Customer.Delete(id);
+        }
+        catch (DO.IdNotFoundException e)
+        {
+            throw new BL.BO.BlNotFoundException("error deleting customer", e);
+        }
+    }
 
-//        return filter != null ? customersBO.Where(filter).ToList() : customersBO;
-//    }
-
-//    public void Update(Customer item)
-//    {
-//        Customer customerDO = new Customer
-//        {
-//            CustomerId = customerDO.CustomerId,
-//            Name = customerDO.Name,
-//            Adress = customerDO.Adress,
-//            Phone = customerDO.Phone
-//        };
-
-//        _customerDAL.Update(customerDO);
-//    }
-
-//    public void Delete(int id)
-//    {
-//        _customerDAL.Delete(id);
-//    }
-//}
+    public bool IsCustomerExist()
+    {
+        try
+        {
+            return _dal.Customer.ReadAll().Any();
+        }
+        catch (DO.IdNotFoundException e)
+        {
+            throw new BL.BO.BlNotFoundException("error checking if customer exists", e);
+        }
+    }
+}

@@ -1,5 +1,8 @@
-﻿namespace DalApi;
-using System.Xml.Linq;
+﻿using System.Xml.Linq;
+using DalApi;
+
+namespace DalApi;
+
 
 static class DalConfig
 {

@@ -12,3 +12,31 @@ Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\good_project_c-\
 Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\good_project_c-\DalList\obj\Debug\refint\DalList.dll
 Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\good_project_c-\DalList\obj\Debug\DalList.pdb
 Z:\יד תשפו\קראוס יעל\c#\גיבוי 2\project_good\good_project_c-\DalList\obj\Debug\ref\DalList.dll
+C:\דבורי\שנה ב\c#\good_project_c-\bin\DalList.deps.json
+C:\דבורי\שנה ב\c#\good_project_c-\bin\DalList.dll
+C:\דבורי\שנה ב\c#\good_project_c-\bin\DalList.pdb
+C:\דבורי\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.csproj.AssemblyReference.cache
+C:\דבורי\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.GeneratedMSBuildEditorConfig.editorconfig
+C:\דבורי\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.AssemblyInfoInputs.cache
+C:\דבורי\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.AssemblyInfo.cs
+C:\דבורי\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.csproj.CoreCompileInputs.cache
+C:\דבורי\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.sourcelink.json
+C:\דבורי\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.csproj.Up2Date
+C:\דבורי\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.dll
+C:\דבורי\שנה ב\c#\good_project_c-\DalList\obj\Debug\refint\DalList.dll
+C:\דבורי\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.pdb
+C:\דבורי\שנה ב\c#\good_project_c-\DalList\obj\Debug\ref\DalList.dll
+C:\יעל\שנה ב\c#\good_project_c-\bin\DalList.deps.json
+C:\יעל\שנה ב\c#\good_project_c-\bin\DalList.dll
+C:\יעל\שנה ב\c#\good_project_c-\bin\DalList.pdb
+C:\יעל\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.csproj.AssemblyReference.cache
+C:\יעל\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.GeneratedMSBuildEditorConfig.editorconfig
+C:\יעל\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.AssemblyInfoInputs.cache
+C:\יעל\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.AssemblyInfo.cs
+C:\יעל\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.csproj.CoreCompileInputs.cache
+C:\יעל\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.sourcelink.json
+C:\יעל\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.csproj.Up2Date
+C:\יעל\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.dll
+C:\יעל\שנה ב\c#\good_project_c-\DalList\obj\Debug\refint\DalList.dll
+C:\יעל\שנה ב\c#\good_project_c-\DalList\obj\Debug\DalList.pdb
+C:\יעל\שנה ב\c#\good_project_c-\DalList\obj\Debug\ref\DalList.dll

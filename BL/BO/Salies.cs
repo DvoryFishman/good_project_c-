@@ -6,24 +6,31 @@ using System.Threading.Tasks;
 
 namespace BL.BO
 {
-    public record Salies
-
-        (int Id,
-         int ProductId,
-         int QuentityForSale,
-         double TotalPriceOnSale,
-         bool OnlyForTheClub,
-         DateTime CampaingStartDate,
-         DateTime CampaingEndDate
-         )
+    public class Salies
     {
-        public Salies() : this(0, 0, 1, 100, true, DateTime.Now, DateTime.Now)
-        {
-        }
+        public int Id { get; init; }
+        public int ProductId { get; init; }
+        public int? QuentityForSale { get; set; }
+        public double? TotalPriceOnSale { get; set; }
+        public bool? OnlyForTheClub { get; set; }
+        public DateTime? CampaingStartDate { get; set; }
+        public DateTime? CampaingEndDate { get; set; }
 
-        public int SaleId { get; set; }
+        public Salies ():this(-1,0,0,0.0,false,DateTime.Now, DateTime.Now) { }
+
+        public Salies(int id, int pId, int qForSale, double totalPriceInSale, bool oftc, DateTime campaingStartDate, DateTime campaingEndDate)
+        {
+            Id = id;
+            ProductId = pId;
+            QuentityForSale = qForSale;
+            TotalPriceOnSale = totalPriceInSale;
+            OnlyForTheClub = oftc;
+            CampaingStartDate = campaingStartDate;
+            CampaingEndDate = campaingEndDate;
+        }
         public override string ToString() => this.ToStringProperty();
     }
+
 }
 
 
