@@ -1,0 +1,125 @@
+﻿using Dal;
+using DalApi;
+using DO;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Xml.Linq;
+using System.Xml.Serialization;
+
+namespace Dal;
+
+internal class ProductImplementation : DalApi.IProduct
+{
+    private readonly string filePath;
+
+    public ProductImplementation()
+    {
+        // prefer repository-level xml folder if present; otherwise use AppDomain base
+        var dir = AppDomain.CurrentDomain.BaseDirectory;
+        string? found = null;
+        for (int i = 0; i < 8; i++)
+        {
+            var candidate = Path.GetFullPath(Path.Combine(dir, "..", "xml"));
+            if (Directory.Exists(candidate) && (File.Exists(Path.Combine(candidate, "products.xml")) || File.Exists(Path.Combine(candidate, "data-config.xml"))))
+            {
+                found = candidate; break;
+            }
+            dir = Path.GetFullPath(Path.Combine(dir, ".."));
+        }
+        if (found == null) found = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "xml"));
+        Directory.CreateDirectory(found);
+        filePath = Path.Combine(found, "products.xml");
+    }
+    private List<Product> Load()
+    {
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Product.Load", $"Load filePath={filePath}");
+        XElement root = XElement.Load(filePath);
+        // בתוך פונקציית ה-Load ב-DalXml3
+        return (from p in root.Elements("Product")
+                select new DO.Product
+                {
+                    ProductId = (int?)p.Element("ProductId") ?? 0,
+
+                    // הוסיפי את השורה הזו! בלי זה השם תמיד יהיה ריק או דיפולטי
+                    //Name = (string)p.Element("Name") ?? "מוצר ללא שם",
+
+                    // תיקון ה-Category: הוספנו DO. לפני השם כדי למנוע בלבול
+                    Category = (string)p.Element("Category") ?? "SHIRT",
+                    Price = (double?)p.Element("Price") ?? 0.0,
+                    QuantityInStock = (int?)p.Element("QuantityInStock") ?? 0
+                }).ToList();
+        // השורה הזו תדפיס לך בחלון ה-Output של Visual Studio איפה הוא מחפש את הקובץ
+
+    }
+
+    private void Save(List<Product> list)
+    {// השורה הזו מוודאת שאם תיקיית ה-xml לא קיימת, היא תיווצר עכשיו
+        string directory = Path.GetDirectoryName(filePath);
+        if (!Directory.Exists(directory))
+        {
+            Directory.CreateDirectory(directory);
+        }
+
+        XmlSerializer serializer = new XmlSerializer(typeof(List<Product>));
+        using (FileStream stream = new FileStream(filePath, FileMode.Create))
+        {
+            serializer.Serialize(stream, list);
+        }
+    }
+
+    public int Create(Product item)
+    {
+        List<Product> products = Load();
+        int nextId = Config.NextProductNum;
+        Product newProduct = item with { ProductId = nextId };
+        products.Add(newProduct);
+        Save(products);
+        return nextId;
+    }
+
+    public Product? Read()
+    {
+        List<Product> products = Load();
+        return products.FirstOrDefault();
+    }
+
+    public Product? Read(int id)
+    {
+        return Read(p => p.ProductId == id);
+    }
+
+    // התאמה לחתימת הממשק: nullable filter ו‑nullable return
+    public Product? Read(Func<Product, bool>? filter)
+    {
+        List<Product> products = Load();
+        var found = filter == null ? products.FirstOrDefault() : products.FirstOrDefault(filter);
+        return found ?? throw new Exception("Product not found");
+    }
+
+    public List<Product> ReadAll(Func<Product, bool>? filter = null)
+    {
+        List<Product> products = Load();
+        var list = (filter == null) ? products : products.Where(filter).ToList();
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Product.ReadAll", $"ReadAll count={list.Count} filePath={filePath}");
+        return list;
+    }
+
+    public void Update(Product item)
+    {
+        List<Product> products = Load();
+        int index = products.FindIndex(p => p.ProductId == item.ProductId);
+        if (index == -1) throw new Exception("Product to update was not found");
+        products[index] = item;
+        Save(products);
+    }
+
+    public void Delete(int id)
+    {
+        List<Product> products = Load();
+        int removedCount = products.RemoveAll(p => p.ProductId == id);
+        if (removedCount == 0) throw new Exception("Product to delete was not found");
+        Save(products);
+    }
+}

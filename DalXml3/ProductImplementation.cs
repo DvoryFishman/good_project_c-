@@ -12,30 +12,93 @@ namespace Dal;
 
 internal class ProductImplementation : DalApi.IProduct
 {
-    private readonly string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "xml", "products.xml");
+    private readonly string filePath;
+
+    public ProductImplementation()
+    {
+        // prefer xml folder inside git repo root if present
+        string? found = null;
+        var dir = AppDomain.CurrentDomain.BaseDirectory;
+        for (int i = 0; i < 12; i++)
+        {
+            var git = Path.GetFullPath(Path.Combine(dir, "..", ".git"));
+            if (Directory.Exists(git))
+            {
+                var repoXml = Path.GetFullPath(Path.Combine(dir, "..", "xml"));
+                if (Directory.Exists(repoXml)) { found = repoXml; break; }
+            }
+            dir = Path.GetFullPath(Path.Combine(dir, ".."));
+        }
+        if (found == null)
+        {
+            // fallback: search parents for xml with data files
+            dir = AppDomain.CurrentDomain.BaseDirectory;
+            for (int i = 0; i < 12; i++)
+            {
+                var candidate = Path.GetFullPath(Path.Combine(dir, "..", "xml"));
+                if (Directory.Exists(candidate) && (File.Exists(Path.Combine(candidate, "products.xml")) || File.Exists(Path.Combine(candidate, "data-config.xml"))))
+                { found = candidate; break; }
+                dir = Path.GetFullPath(Path.Combine(dir, ".."));
+            }
+        }
+        // explicit repo-level override (workspace path)
+        string explicitRepoXml = Path.GetFullPath(Path.Combine("C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-", "xml"));
+        if (found == null) found = Directory.Exists(explicitRepoXml) ? explicitRepoXml : Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "xml"));
+        Directory.CreateDirectory(found);
+        filePath = Path.Combine(found, "products.xml");
+
+        // If repo products.xml exists, remove runtime copy to avoid confusion
+        try
+        {
+            var runtimeXml = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "xml", "products.xml"));
+            var repoXmlPath = Path.Combine(explicitRepoXml, "products.xml");
+            if (File.Exists(repoXmlPath) && File.Exists(runtimeXml) && !string.Equals(repoXmlPath, runtimeXml, StringComparison.OrdinalIgnoreCase))
+            {
+                File.Delete(runtimeXml);
+                Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Product.ctor", $"Deleted runtime copy: {runtimeXml}");
+            }
+        }
+        catch { }
+    }
+    //private List<Product> Load()
+    //{
+    //    Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Product.Load", $"Load filePath={filePath}");
+    //    XElement root = XElement.Load(filePath);
+    //    // בתוך פונקציית ה-Load ב-DalXml3
+    //    return (from p in root.Elements("Product")
+    //            select new DO.Product
+    //            {
+    //                ProductId = (int?)p.Element("ProductId") ?? 0,
+    //                // normalize category to uppercase so downstream code sees a consistent value
+    //                Category = ((string)p.Element("Category") ?? (string)p.Element("Category") ?? "Missing").ToUpperInvariant(),
+    //                Price = (double?)p.Element("Price") ?? 0.0,
+    //                QuantityInStock = (int?)p.Element("QuantityInStock") ?? 0
+    //            }).ToList();
+    //    // השורה הזו תדפיס לך בחלון ה-Output של Visual Studio איפה הוא מחפש את הקובץ
+
+    //}
     private List<Product> Load()
     {
+       
+        if (!File.Exists(filePath)) return new List<Product>();
+
         XElement root = XElement.Load(filePath);
-        // בתוך פונקציית ה-Load ב-DalXml3
-        return (from p in root.Elements("Product")
-                select new DO.Product
-                {
-                    ProductId = (int?)p.Element("ProductId") ?? 0,
+        // חשוב: ללא Namespace אם ב-XML ששלחת אין xmlns:p או משהו דומה בשורש
 
-                    // הוסיפי את השורה הזו! בלי זה השם תמיד יהיה ריק או דיפולטי
-                    //Name = (string)p.Element("Name") ?? "מוצר ללא שם",
+        var list = (from p in root.Elements("Product")
+                    select new DO.Product
+                    {
+                        ProductId = int.Parse(p.Element("ProductId")?.Value ?? "0"),
+                        Category = p.Element("Category")?.Value ?? "Unknown", // אם תראי NULL_IN_XML סימן שהתגית לא נמצאה
+                        Price = double.Parse(p.Element("Price")?.Value ?? "0"),
+                        QuantityInStock = int.Parse(p.Element("QuantityInStock")?.Value ?? "0")
+                    }).ToList();
 
-                    // תיקון ה-Category: הוספנו DO. לפני השם כדי למנוע בלבול
-                    Category = (string)p.Element("Category") ?? "SHIRT",
-                    Price = (double?)p.Element("Price") ?? 0.0,
-                    QuantityInStock = (int?)p.Element("QuantityInStock") ?? 0
-                }).ToList();
-        // השורה הזו תדפיס לך בחלון ה-Output של Visual Studio איפה הוא מחפש את הקובץ
-
+        return list;
     }
-
     private void Save(List<Product> list)
     {// השורה הזו מוודאת שאם תיקיית ה-xml לא קיימת, היא תיווצר עכשיו
+        //Microsoft.VisualBasic.Interaction.MsgBox(Path.GetFullPath(filePath));
         string directory = Path.GetDirectoryName(filePath);
         if (!Directory.Exists(directory))
         {
@@ -81,8 +144,9 @@ internal class ProductImplementation : DalApi.IProduct
     public List<Product> ReadAll(Func<Product, bool>? filter = null)
     {
         List<Product> products = Load();
-        if (filter == null) return products;
-        return products.Where(filter).ToList();
+        var list = (filter == null) ? products : products.Where(filter).ToList();
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Product.ReadAll", $"ReadAll count={list.Count} filePath={filePath}");
+        return list;
     }
 
     public void Update(Product item)

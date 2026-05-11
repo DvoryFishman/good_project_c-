@@ -5,7 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using BL.BlApi;
 using BL.BO;
-
+//using DO;
 namespace UI
 {
     public partial class ProductForm : Form
@@ -22,6 +22,7 @@ namespace UI
         private TextBox txtName;
         private TextBox txtPrice;
         private NumericUpDown numQty;
+        private ComboBox comboBoxCategory;
         private Label lblTotalCount;
 
         private List<Product> _currentList = new List<Product>();
@@ -70,6 +71,11 @@ namespace UI
             var lblName = new Label { Text = "שם מוצר:", Location = new Point(10, 10), AutoSize = true };
             txtName = new TextBox { Location = new Point(10, 35), Width = 300 };
 
+            var lblCategory = new Label { Text = "קטגוריה:", Location = new Point(420, 10), AutoSize = true };
+            comboBoxCategory = new ComboBox { Location = new Point(420, 35), Width = 120, DropDownStyle = ComboBoxStyle.DropDownList };
+            // populate with enum values
+            comboBoxCategory.DataSource = Enum.GetValues(typeof(Category)).Cast<Category>().ToList();
+
             var lblPrice = new Label { Text = "מחיר:", Location = new Point(330, 10), AutoSize = true };
             txtPrice = new TextBox { Location = new Point(330, 35), Width = 120 };
 
@@ -88,6 +94,7 @@ namespace UI
             lblTotalCount = new Label { Text = "סה\"כ מוצרים: 0", Location = new Point(10, 70), AutoSize = true };
 
             panelEditor.Controls.AddRange(new Control[] { lblName, txtName, lblPrice, txtPrice, lblQty, numQty, btnAdd, btnUpdate, btnDelete, lblTotalCount });
+            panelEditor.Controls.AddRange(new Control[] { lblCategory, comboBoxCategory });
 
             this.Controls.AddRange(new Control[] { lblSearch, textBoxSearch, checkBoxInStockOnly, btnRefresh, dataGridViewProducts, panelEditor });
         }
@@ -149,6 +156,8 @@ namespace UI
                     txtName.Text = row.ToString() ?? string.Empty;
                     txtPrice.Text = row.Price.ToString() ?? string.Empty;
                     numQty.Value = Math.Min(numQty.Maximum, Math.Max(numQty.Minimum, row.QuantityInStock));
+                    // set category selection
+                    try { comboBoxCategory.SelectedItem = row.Category; } catch { }
                 }
             }
         }
@@ -172,7 +181,8 @@ namespace UI
                 {
                     //Name = txtName.Text.Trim(),
                     Price = price.Value,
-                    QuantityInStock = (int)numQty.Value
+                    QuantityInStock = (int)numQty.Value,
+                    Category = comboBoxCategory.SelectedItem is Category c ? (BL.BO.Category)c : BL.BO.Category.SHIRT
                 };
 
                 var created = _bl.Product.Create(prod);
@@ -203,6 +213,7 @@ namespace UI
                 //selected.Name = txtName.Text.Trim();
                 selected.Price = price.Value;
                 selected.QuantityInStock = (int)numQty.Value;
+                selected.Category = comboBoxCategory.SelectedItem is Category c ? (BL.BO.Category)c : selected.Category;
 
                 _bl.Product.Update(selected);
                 MessageBox.Show("מוצר עודכן בהצלחה.", "אישור", MessageBoxButtons.OK, MessageBoxIcon.Information);

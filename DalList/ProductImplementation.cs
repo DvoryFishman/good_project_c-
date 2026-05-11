@@ -1,5 +1,4 @@
-﻿
-using DO;
+﻿using DO;
 using DalApi;
 using static Dal.DataSource;
 namespace Dal;
@@ -22,8 +21,9 @@ public class ProductImplementation : IProduct
     public Product? Read(Func<Product, bool>? filter)
     {
         Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "start");
+        // LINQ: return first product that matches filter; if filter is null return first non-null product
         var q = from p in products
-                where filter != null && filter(p)
+                where p != null && (filter == null || filter(p))
                 select p;
         Product? p1 = q.FirstOrDefault();
         if (p1 == null)
@@ -35,6 +35,7 @@ public class ProductImplementation : IProduct
     public Product? Read()
     {
         Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "start");
+        // LINQ: return the first non-null product
         var q = from p in products
                 where p != null
                 select p;
@@ -48,28 +49,32 @@ public class ProductImplementation : IProduct
     public List<Product> ReadAll(Func<Product, bool>? filter = null)
     {
         Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "start");
+        // LINQ: if filter is null return all non-null products, otherwise filter accordingly
         var q = from p in products
-                where filter != null && filter(p)
+                where p != null && (filter == null || filter(p))
                 select p;
+        var list = q.Cast<Product>().ToList();
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Product.ReadAll", $"ReadAll count={list.Count}");
         Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "end");
-        return q.ToList();
+        return list;
     }
     public void Update(Product item)
     {
         Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "start");
-        var q = from p in products
-                where item.ProductId == p.ProductId
-                select p;
-        Product? p1 = q.FirstOrDefault();
-        Delete(p1.ProductId);
-        Create(item);
+        // find index using LINQ then replace
+        var found = (from pair in products.Select((p, idx) => new { p, idx })
+                     where pair.p != null && pair.p.ProductId == item.ProductId
+                     select pair).FirstOrDefault();
+        if (found == null)
+            throw new IdNotFoundException();
+        products[found.idx] = item;
         Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "end");
     }
     public void Delete(int id)
     {
         Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Create", "start");
         var q = from p in products
-                where p.ProductId == id
+                where p != null && p.ProductId == id
                 select p;
         Product? product = q.FirstOrDefault();
         if (product == null)

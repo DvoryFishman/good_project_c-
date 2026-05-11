@@ -9,10 +9,8 @@ namespace DO
         int QuantityInStock)
     {
 
-        public Product() : this( 0, "shoose", 10, 10)
+        public Product() : this(0,"", 10, 10)
         {
-
-
         }
     }
 }

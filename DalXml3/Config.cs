@@ -7,31 +7,59 @@ using System.Xml.Linq;
 
 namespace Dal;
 
-internal class Config
-{
-    private static string s_config_xml = @"..\xml\data-config.xml";
-
-    public static int NextProductNum
+    internal class Config
     {
-        get
+        private static string s_config_xml;
+
+        static Config()
         {
-            XElement root = XElement.Load(s_config_xml);
-            int currentNum = (int)root.Element("ProductNum");
-            root.Element("ProductNum").SetValue(currentNum + 1);
-            root.Save(s_config_xml);
-            return currentNum;
+            // find xml directory (prefer repo-level)
+            var dir = AppDomain.CurrentDomain.BaseDirectory;
+            string? found = null;
+            for (int i = 0; i < 8; i++)
+            {
+                var candidate = Path.GetFullPath(Path.Combine(dir, "..", "xml"));
+                if (Directory.Exists(candidate) && (File.Exists(Path.Combine(candidate, "data-config.xml")) || File.Exists(Path.Combine(candidate, "products.xml"))))
+                {
+                    found = candidate; break;
+                }
+                dir = Path.GetFullPath(Path.Combine(dir, ".."));
+            }
+            if (found == null) found = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "xml"));
+            Directory.CreateDirectory(found);
+            s_config_xml = Path.Combine(found, "data-config.xml");
+
+            if (!File.Exists(s_config_xml))
+            {
+                var root = new XElement("Config",
+                    new XElement("ProductNum", 10000),
+                    new XElement("SaleNum", 3000)
+                );
+                root.Save(s_config_xml);
+            }
+        }
+
+        public static int NextProductNum
+        {
+            get
+            {
+                XElement root = XElement.Load(s_config_xml);
+                int currentNum = (int)root.Element("ProductNum");
+                root.Element("ProductNum").SetValue(currentNum + 1);
+                root.Save(s_config_xml);
+                return currentNum;
+            }
+        }
+
+        public static int NextSaleNum
+        {
+            get
+            {
+                XElement root = XElement.Load(s_config_xml);
+                int currentNum = (int)root.Element("SaleNum");
+                root.Element("SaleNum").SetValue(currentNum + 1);
+                root.Save(s_config_xml);
+                return currentNum;
+            }
         }
     }
-
-    public static int NextSaleNum
-    {
-        get
-        {
-            XElement root = XElement.Load(s_config_xml);
-            int currentNum = (int)root.Element("SaleNum");
-            root.Element("SaleNum").SetValue(currentNum + 1);
-            root.Save(s_config_xml);
-            return currentNum;
-        }
-    }
-}

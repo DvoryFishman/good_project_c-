@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BlTest\\BlTest.csproj": {}
+    "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\BlTest\\BlTest.csproj": {}
   },
   "projects": {
-    "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BlTest\\BlTest.csproj": {
+    "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\BlTest\\BlTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BlTest\\BlTest.csproj",
+        "projectUniqueName": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\BlTest\\BlTest.csproj",
         "projectName": "BlTest",
-        "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BlTest\\BlTest.csproj",
+        "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\BlTest\\BlTest.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BlTest\\obj\\",
+        "outputPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\BlTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BL\\BL.csproj": {
-                "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BL\\BL.csproj"
+              "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\BL\\BL.csproj": {
+                "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\BL\\BL.csproj"
               },
-              "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalTest1\\DalTest1.csproj": {
-                "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalTest1\\DalTest1.csproj"
+              "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalTest1\\DalTest1.csproj": {
+                "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalTest1\\DalTest1.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BL\\BL.csproj": {
+    "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\BL\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BL\\BL.csproj",
+        "projectUniqueName": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\BL\\BL.csproj",
         "projectName": "BL",
-        "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BL\\BL.csproj",
+        "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\BL\\BL.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BL\\obj\\",
+        "outputPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\BL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -106,11 +106,14 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalFacade\\DalFacade.csproj": {
-                "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalFacade\\DalFacade.csproj"
+              "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalFacade\\DalFacade.csproj": {
+                "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalFacade\\DalFacade.csproj"
               },
-              "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalList\\DalList.csproj": {
-                "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalList\\DalList.csproj"
+              "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalList\\DalList.csproj": {
+                "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalList\\DalList.csproj"
+              },
+              "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\Tools\\Tools.csproj": {
+                "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\Tools\\Tools.csproj"
               }
             }
           }
@@ -150,14 +153,14 @@
         }
       }
     },
-    "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalFacade\\DalFacade.csproj": {
+    "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalFacade\\DalFacade.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalFacade\\DalFacade.csproj",
+        "projectUniqueName": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalFacade\\DalFacade.csproj",
         "projectName": "DalFacade",
-        "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalFacade\\DalFacade.csproj",
+        "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalFacade\\DalFacade.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalFacade\\obj\\",
+        "outputPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalFacade\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -216,14 +219,14 @@
         }
       }
     },
-    "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalList\\DalList.csproj": {
+    "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalList\\DalList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalList\\DalList.csproj",
+        "projectUniqueName": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalList\\DalList.csproj",
         "projectName": "DalList",
-        "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalList\\DalList.csproj",
+        "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalList\\DalList.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalList\\obj\\",
+        "outputPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalList\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -245,11 +248,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalFacade\\DalFacade.csproj": {
-                "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalFacade\\DalFacade.csproj"
+              "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalFacade\\DalFacade.csproj": {
+                "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalFacade\\DalFacade.csproj"
               },
-              "C:\\יעל\\שנה ב\\c#\\good_project_c-\\Tools\\Tools.csproj": {
-                "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\Tools\\Tools.csproj"
+              "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\Tools\\Tools.csproj": {
+                "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\Tools\\Tools.csproj"
               }
             }
           }
@@ -289,14 +292,14 @@
         }
       }
     },
-    "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalTest1\\DalTest1.csproj": {
+    "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalTest1\\DalTest1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalTest1\\DalTest1.csproj",
+        "projectUniqueName": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalTest1\\DalTest1.csproj",
         "projectName": "DalTest1",
-        "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalTest1\\DalTest1.csproj",
+        "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalTest1\\DalTest1.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalTest1\\obj\\",
+        "outputPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalTest1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -318,20 +321,20 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BL\\BL.csproj": {
-                "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\BL\\BL.csproj"
+              "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\BL\\BL.csproj": {
+                "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\BL\\BL.csproj"
               },
-              "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalFacade\\DalFacade.csproj": {
-                "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalFacade\\DalFacade.csproj"
+              "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalFacade\\DalFacade.csproj": {
+                "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalFacade\\DalFacade.csproj"
               },
-              "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalList\\DalList.csproj": {
-                "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalList\\DalList.csproj"
+              "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalList\\DalList.csproj": {
+                "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalList\\DalList.csproj"
               },
-              "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalXml3\\DalXml3.csproj": {
-                "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalXml3\\DalXml3.csproj"
+              "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalXml3\\DalXml3.csproj": {
+                "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalXml3\\DalXml3.csproj"
               },
-              "C:\\יעל\\שנה ב\\c#\\good_project_c-\\Tools\\Tools.csproj": {
-                "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\Tools\\Tools.csproj"
+              "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\Tools\\Tools.csproj": {
+                "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\Tools\\Tools.csproj"
               }
             }
           }
@@ -371,14 +374,14 @@
         }
       }
     },
-    "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalXml3\\DalXml3.csproj": {
+    "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalXml3\\DalXml3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalXml3\\DalXml3.csproj",
+        "projectUniqueName": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalXml3\\DalXml3.csproj",
         "projectName": "DalXml3",
-        "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalXml3\\DalXml3.csproj",
+        "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalXml3\\DalXml3.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalXml3\\obj\\",
+        "outputPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalXml3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -400,11 +403,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalFacade\\DalFacade.csproj": {
-                "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalFacade\\DalFacade.csproj"
+              "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalFacade\\DalFacade.csproj": {
+                "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\DalFacade\\DalFacade.csproj"
               },
-              "C:\\יעל\\שנה ב\\c#\\good_project_c-\\Tools\\Tools.csproj": {
-                "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\Tools\\Tools.csproj"
+              "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\Tools\\Tools.csproj": {
+                "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\Tools\\Tools.csproj"
               }
             }
           }
@@ -444,14 +447,14 @@
         }
       }
     },
-    "C:\\יעל\\שנה ב\\c#\\good_project_c-\\Tools\\Tools.csproj": {
+    "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\Tools\\Tools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\Tools\\Tools.csproj",
+        "projectUniqueName": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\Tools\\Tools.csproj",
         "projectName": "Tools",
-        "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\Tools\\Tools.csproj",
+        "projectPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\Tools\\Tools.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\Tools\\obj\\",
+        "outputPath": "C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-\\Tools\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

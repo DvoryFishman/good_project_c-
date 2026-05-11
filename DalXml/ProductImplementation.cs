@@ -9,23 +9,96 @@ namespace Dal;
 
 internal class ProductImplementation : DalApi.IProduct
 {
-    private readonly string filePath = @"..\xml\products.xml";
+    private readonly string filePath;
+
+    public ProductImplementation()
+    {
+        // Prefer repository-level xml folder if present (explicit repo path override),
+        // otherwise fall back to FindXmlDirectory() which searches parents.
+        string explicitRepoXml = Path.GetFullPath(Path.Combine("C:\\דבורי\\שנה ב\\c#\\מעודכן\\good_project_c-", "xml"));
+        var xmlDir = Directory.Exists(explicitRepoXml) ? explicitRepoXml : FindXmlDirectory();
+        Directory.CreateDirectory(xmlDir);
+        filePath = Path.Combine(xmlDir, "products.xml");
+
+        // If an explicit repo products.xml exists, remove any runtime copy under the base directory to avoid reading the wrong file
+        try
+        {
+            var runtimeXml = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "xml", "products.xml"));
+            var repoXmlPath = Path.Combine(explicitRepoXml, "products.xml");
+            if (File.Exists(repoXmlPath) && File.Exists(runtimeXml) && !string.Equals(repoXmlPath, runtimeXml, StringComparison.OrdinalIgnoreCase))
+            {
+                File.Delete(runtimeXml);
+                Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Product.ctor", $"Deleted runtime copy: {runtimeXml}");
+            }
+        }
+        catch { /* swallow errors to avoid breaking DAL construction */ }
+    }
+
+    private static string FindXmlDirectory()
+    {
+        // try to find repo root (contains .git) and use its xml folder
+        var dir = AppContext.BaseDirectory;
+        for (int i = 0; i < 12; i++)
+        {
+            var git = Path.GetFullPath(Path.Combine(dir, "..", ".git"));
+            if (Directory.Exists(git))
+            {
+                var repoXml = Path.GetFullPath(Path.Combine(dir, "..", "xml"));
+                if (Directory.Exists(repoXml)) return repoXml;
+                break;
+            }
+            dir = Path.GetFullPath(Path.Combine(dir, ".."));
+        }
+
+        // otherwise prefer any parent xml folder that contains data files
+        dir = AppContext.BaseDirectory;
+        for (int i = 0; i < 12; i++)
+        {
+            var candidate = Path.GetFullPath(Path.Combine(dir, "..", "xml"));
+            if (Directory.Exists(candidate))
+            {
+                if (File.Exists(Path.Combine(candidate, "products.xml")) || File.Exists(Path.Combine(candidate, "data-config.xml")))
+                    return candidate;
+            }
+            dir = Path.GetFullPath(Path.Combine(dir, ".."));
+        }
+
+        // fallback to xml under AppContext.BaseDirectory
+        return Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "xml"));
+    }
 
     // --- פונקציית עזר פנימית לטעינה (Deserialize) ---
     private List<Product> Load()
     {
-        if (!File.Exists(filePath)) return new List<Product>();
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Product.Load", $"Load filePath={filePath}");
 
-        XmlSerializer serializer = new XmlSerializer(typeof(List<Product>));
-        using (FileStream stream = new FileStream(filePath, FileMode.Open))
-        {
-            return (List<Product>)serializer.Deserialize(stream);
-        }
+        // 1. טעינת השורש
+        XElement root = XElement.Load(filePath);
+
+        // 2. חילוץ ה-Namespace מתוך השורש (זה ה-xmlns שמופיע ב-XML)
+        XNamespace ns = root.GetDefaultNamespace();
+
+        // 3. בתוך ה-LINQ, מוסיפים את ה-ns לכל שם של תגית
+        return (from p in root.Elements(ns + "Product") // הוספנו ns+ כאן
+                select new DO.Product
+                {
+                    // וגם כאן לכל אלמנט פנימי:
+                    ProductId = (int?)p.Element(ns + "ProductId") ?? 0,
+
+                    Category = (string)p.Element(ns + "Category") ?? "Unknown",
+
+                    Price = (double?)p.Element(ns + "Price") ?? 0.0,
+                    QuantityInStock = (int?)p.Element(ns + "QuantityInStock") ?? 0
+                }).ToList();
     }
 
     // --- פונקציית עזר פנימית לשמירה (Serialize) ---
     private void Save(List<Product> list)
     {
+        // ensure directory exists
+        var dir = Path.GetDirectoryName(filePath);
+        if (!string.IsNullOrEmpty(dir)) Directory.CreateDirectory(dir);
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Product.Save", $"Save filePath={filePath}");
         XmlSerializer serializer = new XmlSerializer(typeof(List<Product>));
         using (FileStream stream = new FileStream(filePath, FileMode.Create))
         {
@@ -62,8 +135,9 @@ internal class ProductImplementation : DalApi.IProduct
     public IEnumerable<Product> ReadAll(Func<Product, bool>? filter = null)
     {
         List<Product> products = Load();
-        if (filter == null) return products;
-        return products.Where(filter);
+        var list = (filter == null) ? products : products.Where(filter).ToList();
+        Tools.LogManager.writeToLog(Tools.LogManager.getPathCurrentFile(), "Product.ReadAll", $"ReadAll count={list.Count} filePath={filePath}");
+        return list;
     }
 
     // 4. עדכון (Update)

@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ArrayOfProduct>
-	
+<ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Product>
+    <ProductId>1409</ProductId>
+    <Category>SHIRT</Category>
+    <Price>100</Price>
+    <QuantityInStock>2000</QuantityInStock>
+  </Product>
+  <Product>
+    <ProductId>1410</ProductId>
+    <Category>SHOES</Category>
+    <Price>150</Price>
+    <QuantityInStock>500</QuantityInStock>
+  </Product>
+  <Product>
+    <ProductId>1411</ProductId>
+    <Category>SLIPPERS</Category>
+    <Price>80</Price>
+    <QuantityInStock>300</QuantityInStock>
+  </Product>
+  <Product>
+    <ProductId>1413</ProductId>
+    <Category>SHOES</Category>
+    <Price>444</Price>
+    <QuantityInStock>150</QuantityInStock>
+  </Product>
+  <Product>
+    <ProductId>1415</ProductId>
+    <Category>SLIPPERS</Category>
+    <Price>120</Price>
+    <QuantityInStock>0</QuantityInStock>
+  </Product>
 </ArrayOfProduct>

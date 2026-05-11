@@ -9,13 +9,14 @@ namespace BL.BO
     public class Product
     {
         public int ProductId { get; init; }
-        public double Price { get; set; }
         public Category Category { get; set; }
+
+        public double Price { get; set; }
         public int QuantityInStock { get; set; }
 
-        public Product() : this(-1, 0.0, Category.SHIRT, 0) { }
+        public Product() : this(-1,default(Category),0.0, 0) { }
 
-        public Product(int id, double price, Category category, int quantityInStock)
+        public Product(int id, Category category,double price , int quantityInStock)
         {
             ProductId = id;
             Price = price;

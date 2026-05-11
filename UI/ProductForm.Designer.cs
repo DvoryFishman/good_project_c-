@@ -36,18 +36,9 @@ namespace UI
             comboBox1 = new ComboBox();
             pictureBox1 = new PictureBox();
             numericUpDown1 = new NumericUpDown();
-            // יצירת תיבת טקסט לשם
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtName.Location = new System.Drawing.Point(270, 105); // מיקום ליד הקומבובוקס
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(200, 27);
-            this.Controls.Add(this.txtName);
-
-            // הוספת לייבל (כותרת) מעל
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelName.Text = "שם מוצר:";
-            this.labelName.Location = new System.Drawing.Point(270, 80);
-            this.Controls.Add(this.labelName);
+            // Note: control fields such as txtName and labelName are declared
+            // and initialized in the other partial class file (InitializeCustomComponents),
+            // so they are not created here to avoid duplicate declarations.
 
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -112,7 +103,6 @@ namespace UI
         private ComboBox comboBox1;
         private PictureBox pictureBox1;
         private NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label labelName;
+        // txtName and labelName are declared in the other partial class file.
     }
 }
