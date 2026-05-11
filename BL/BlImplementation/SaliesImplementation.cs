@@ -9,7 +9,7 @@ using DO;
 
 namespace BL.BlImplementation
 {
-    internal class SaliesImplementation : ISalies
+    internal class SaliesImplementation : BL.BlApi.ISalies
     {
         private DalApi.IDal _dal = DalApi.Factory.Get;
 
@@ -102,6 +102,16 @@ namespace BL.BlImplementation
             {
                 return false;
             }
+        }
+
+        public void DoOrder(BL.BO.Salies o)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<object> AddProductToOrder(BL.BO.Order newOrder, int pId, int amount)
+        {
+            throw new NotImplementedException();
         }
     }
 }

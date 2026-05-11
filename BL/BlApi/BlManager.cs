@@ -8,7 +8,7 @@ namespace BL.BlImplementation
         private static ICustomer _customer;
         private static IProduct _product;
         private static ISalies _salies;
-
+        private static IOrder _order;
         public ICustomer Customer
         {
             get
@@ -33,6 +33,14 @@ namespace BL.BlImplementation
             {
                 _salies ??= new SaliesImplementation(DalApi.Factory.Get);
                 return _salies;
+            }
+        }
+        public IOrder Order
+        {
+            get
+            {
+                _order ??= new OrderImplementation();
+                return _order;
             }
         }
     }

@@ -17,6 +17,12 @@
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj" />
     <ProjectReference Include="..\DalList\DalList.csproj" />
+    <ProjectReference Include="..\DalTest1\DalTest1.csproj" />
+    <ProjectReference Include="..\DalXml3\DalXml3.csproj" />
   </ItemGroup>
-
+	<ItemGroup>
+		<None Update="xml\dal-config.xml">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 </Project>

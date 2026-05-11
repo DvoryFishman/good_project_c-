@@ -1,31 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Xml.Serialization;
-using System.IO;
+﻿using Dal;
+using DalApi;
 using DO;
-using DalApi; // או המקום שבו נמצא Config.cs
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Xml.Linq;
+using System.Xml.Serialization;
+
 namespace Dal;
 
 internal class ProductImplementation : DalApi.IProduct
 {
-    private readonly string filePath = @"..\xml\products.xml";
-
-    // --- פונקציית עזר פנימית לטעינה (Deserialize) ---
+    private readonly string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "xml", "products.xml");
     private List<Product> Load()
     {
-        if (!File.Exists(filePath)) return new List<Product>();
+        XElement root = XElement.Load(filePath);
+        // בתוך פונקציית ה-Load ב-DalXml3
+        return (from p in root.Elements("Product")
+                select new DO.Product
+                {
+                    ProductId = (int?)p.Element("ProductId") ?? 0,
 
-        XmlSerializer serializer = new XmlSerializer(typeof(List<Product>));
-        using (FileStream stream = new FileStream(filePath, FileMode.Open))
-        {
-            return (List<Product>)serializer.Deserialize(stream);
-        }
+                    // הוסיפי את השורה הזו! בלי זה השם תמיד יהיה ריק או דיפולטי
+                    //Name = (string)p.Element("Name") ?? "מוצר ללא שם",
+
+                    // תיקון ה-Category: הוספנו DO. לפני השם כדי למנוע בלבול
+                    Category = (string)p.Element("Category") ?? "SHIRT",
+                    Price = (double?)p.Element("Price") ?? 0.0,
+                    QuantityInStock = (int?)p.Element("QuantityInStock") ?? 0
+                }).ToList();
+        // השורה הזו תדפיס לך בחלון ה-Output של Visual Studio איפה הוא מחפש את הקובץ
+
     }
 
-    // --- פונקציית עזר פנימית לשמירה (Serialize) ---
     private void Save(List<Product> list)
-    {
+    {// השורה הזו מוודאת שאם תיקיית ה-xml לא קיימת, היא תיווצר עכשיו
+        string directory = Path.GetDirectoryName(filePath);
+        if (!Directory.Exists(directory))
+        {
+            Directory.CreateDirectory(directory);
+        }
+
         XmlSerializer serializer = new XmlSerializer(typeof(List<Product>));
         using (FileStream stream = new FileStream(filePath, FileMode.Create))
         {
@@ -33,70 +49,56 @@ internal class ProductImplementation : DalApi.IProduct
         }
     }
 
-    // 1. הוספה (Create)
     public int Create(Product item)
     {
         List<Product> products = Load();
-
-        // קבלת מספר רץ מהקובץ data-config דרך ה-Config
         int nextId = Config.NextProductNum;
-
-        // יצירת אובייקט חדש עם ה-ID שנוצר
         Product newProduct = item with { ProductId = nextId };
-
         products.Add(newProduct);
         Save(products);
-
         return nextId;
     }
+
     public Product? Read()
     {
         List<Product> products = Load();
         return products.FirstOrDefault();
     }
-    // דוגמה עבור Product
+
     public Product? Read(int id)
     {
         return Read(p => p.ProductId == id);
     }
 
-    // 2. שליפה (Read/Get)
-    public Product Read(Func<Product, bool> filter)
+    // התאמה לחתימת הממשק: nullable filter ו‑nullable return
+    public Product? Read(Func<Product, bool>? filter)
     {
         List<Product> products = Load();
-        return products.FirstOrDefault(filter)
-               ?? throw new Exception("Product not found");
+        var found = filter == null ? products.FirstOrDefault() : products.FirstOrDefault(filter);
+        return found ?? throw new Exception("Product not found");
     }
 
-    // 3. שליפת כל הרשימה (ReadAll)
     public List<Product> ReadAll(Func<Product, bool>? filter = null)
     {
         List<Product> products = Load();
         if (filter == null) return products;
-        return products.Where(filter).ToList(); // הוספת .ToList() בסוף
+        return products.Where(filter).ToList();
     }
 
-    // 4. עדכון (Update)
     public void Update(Product item)
     {
         List<Product> products = Load();
-
         int index = products.FindIndex(p => p.ProductId == item.ProductId);
         if (index == -1) throw new Exception("Product to update was not found");
-
-        products[index] = item; // עדכון האיבר ברשימה הלוגית
-
-        Save(products); // שמירה חזרה לקובץ
+        products[index] = item;
+        Save(products);
     }
 
-    // 5. מחיקה (Delete)
     public void Delete(int id)
     {
         List<Product> products = Load();
-
         int removedCount = products.RemoveAll(p => p.ProductId == id);
         if (removedCount == 0) throw new Exception("Product to delete was not found");
-
         Save(products);
     }
 }

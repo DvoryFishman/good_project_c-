@@ -9,7 +9,9 @@
       "UI/1.0.0": {
         "dependencies": {
           "BL": "1.0.0",
-          "DalList": "1.0.0"
+          "DalList": "1.0.0",
+          "DalTest1": "1.0.0",
+          "DalXml3": "1.0.0"
         },
         "runtime": {
           "UI.dll": {}
@@ -47,6 +49,33 @@
           }
         }
       },
+      "DalTest1/1.0.0": {
+        "dependencies": {
+          "BL": "1.0.0",
+          "DalFacade": "1.0.0",
+          "DalList": "1.0.0",
+          "DalXml3": "1.0.0",
+          "Tools": "1.0.0"
+        },
+        "runtime": {
+          "DalTest1.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "DalXml3/1.0.0": {
+        "dependencies": {
+          "DalFacade": "1.0.0",
+          "Tools": "1.0.0"
+        },
+        "runtime": {
+          "DalXml3.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Tools/1.0.0": {
         "runtime": {
           "Tools.dll": {
@@ -74,6 +103,16 @@
       "sha512": ""
     },
     "DalList/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DalTest1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DalXml3/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

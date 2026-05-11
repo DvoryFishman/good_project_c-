@@ -14,4 +14,5 @@ public interface IBlManager
     IProduct Product { get; }
     ICustomer Customer { get; }
     ISalies Salies { get; }
+    IOrder Order { get; }
 }

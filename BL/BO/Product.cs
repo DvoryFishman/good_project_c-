@@ -13,7 +13,7 @@ namespace BL.BO
         public Category Category { get; set; }
         public int QuantityInStock { get; set; }
 
-        public Product() : this(-1, 0.0, Category.SHOOSE, 0) { }
+        public Product() : this(-1, 0.0, Category.SHIRT, 0) { }
 
         public Product(int id, double price, Category category, int quantityInStock)
         {

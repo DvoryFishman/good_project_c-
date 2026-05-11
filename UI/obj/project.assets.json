@@ -40,6 +40,37 @@
           "bin/placeholder/DalList.dll": {}
         }
       },
+      "DalTest1/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "BL": "1.0.0",
+          "DalFacade": "1.0.0",
+          "DalList": "1.0.0",
+          "DalXml3": "1.0.0",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DalTest1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DalTest1.dll": {}
+        }
+      },
+      "DalXml3/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DalFacade": "1.0.0",
+          "Tools": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DalXml3.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DalXml3.dll": {}
+        }
+      },
       "Tools/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -68,6 +99,16 @@
       "path": "../DalList/DalList.csproj",
       "msbuildProject": "../DalList/DalList.csproj"
     },
+    "DalTest1/1.0.0": {
+      "type": "project",
+      "path": "../DalTest1/DalTest1.csproj",
+      "msbuildProject": "../DalTest1/DalTest1.csproj"
+    },
+    "DalXml3/1.0.0": {
+      "type": "project",
+      "path": "../DalXml3/DalXml3.csproj",
+      "msbuildProject": "../DalXml3/DalXml3.csproj"
+    },
     "Tools/1.0.0": {
       "type": "project",
       "path": "../Tools/Tools.csproj",
@@ -77,7 +118,9 @@
   "projectFileDependencyGroups": {
     "net9.0-windows7.0": [
       "BL >= 1.0.0",
-      "DalList >= 1.0.0"
+      "DalList >= 1.0.0",
+      "DalTest1 >= 1.0.0",
+      "DalXml3 >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -118,6 +161,12 @@
             },
             "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalList\\DalList.csproj": {
               "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalList\\DalList.csproj"
+            },
+            "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalTest1\\DalTest1.csproj": {
+              "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalTest1\\DalTest1.csproj"
+            },
+            "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalXml3\\DalXml3.csproj": {
+              "projectPath": "C:\\יעל\\שנה ב\\c#\\good_project_c-\\DalXml3\\DalXml3.csproj"
             }
           }
         }

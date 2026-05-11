@@ -10,5 +10,9 @@
     <ProjectReference Include="..\DalFacade\DalFacade.csproj" />
     <ProjectReference Include="..\Tools\Tools.csproj" />
   </ItemGroup>
-
+	<ItemGroup>
+		<None Update="xml\dal-config.xml">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 </Project>

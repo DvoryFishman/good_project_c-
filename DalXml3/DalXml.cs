@@ -3,32 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DalApi;
 
-namespace Dal
+namespace Dal;
+
+public sealed class DalXml3 : IDal
 {
-    using DalApi;
-    using System;
+    private static readonly DalXml3 instance = new DalXml3();
+    public static DalXml3 Instance { get { return instance; } }
 
-    namespace Dal;
+    private DalXml3() { }
 
-    // שימוש ב-sealed כדי למנוע ירושה
-    public sealed class DalXml : IDal
-    {
-        // 1. יצירת המופע היחיד של המחלקה באופן סטטי (Thread-safe)
-        private static readonly DalXml instance = new DalXml();
-
-        // 2. מאפיין ציבורי סטטי שדרכו ניגשים למופע היחיד
-        public static DalXml Instance { get { return instance; } }
-
-        // 3. בנאי פרטי כדי למנוע יצירת מופע חדש מבחוץ (new DalXml())
-        private DalXml() { }
-
-        // --- מימוש תתי הממשקים כפי שנדרש ---
-
-        public IProduct Product { get; } = new ProductImplementation();
-
-        public ICustomer Customer { get; } = new CustomerImplementation();
-
-        public ISalies Salies { get; } = new SaliesImplementation();
-    }
+    public IProduct Product { get; } = new ProductImplementation();
+    public ICustomer Customer { get; } = new CustomerImplementation();
+    public ISalies Salies { get; } = new SaliesImplementation();
 }

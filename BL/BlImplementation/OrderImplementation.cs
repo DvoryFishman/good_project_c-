@@ -6,7 +6,7 @@ using DO;
 
 namespace BL.BlImplementation
 {
-    internal class OrderImplementation
+    internal class OrderImplementation : BlApi.IOrder
     {
         // גישה לשכבת הנתונים
         private DalApi.IDal _dal = DalApi.Factory.Get;
