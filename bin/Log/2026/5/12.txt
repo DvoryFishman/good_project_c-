@@ -439,3 +439,56 @@
 12/05/2026 00:58:00	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
 12/05/2026 00:58:03	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
 12/05/2026 00:58:11	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:07:56	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:07:56	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:07:58	DalXml.ReadAll:	start
+12/05/2026 01:07:58	DalXml.ReadAll:	end
+12/05/2026 01:08:10	DalXml.Delete:	start
+12/05/2026 01:08:10	DalXml.Delete:	end
+12/05/2026 01:08:10	DalXml.ReadAll:	start
+12/05/2026 01:08:10	DalXml.ReadAll:	end
+12/05/2026 01:08:14	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:08:35	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:11:22	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:11:22	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:11:24	DalXml.ReadAll:	start
+12/05/2026 01:11:24	DalXml.ReadAll:	end
+12/05/2026 01:11:28	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:11:41	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:15:46	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:15:46	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:15:48	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:19:47	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:19:47	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:19:49	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:19:58	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=5 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:20:04	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:24:32	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:24:32	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:24:35	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:24:38	DalXml.ReadAll:	start
+12/05/2026 01:24:38	DalXml.ReadAll:	end
+12/05/2026 01:25:12	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:25:12	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:28:34	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:28:34	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:28:36	DalXml.ReadAll:	start
+12/05/2026 01:28:36	DalXml.ReadAll:	end
+12/05/2026 01:29:32	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:29:32	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:29:34	DalXml.ReadAll:	start
+12/05/2026 01:29:34	DalXml.ReadAll:	end
+12/05/2026 01:29:41	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:31:08	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:31:08	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:31:09	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:31:16	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:31:36	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:31:53	DalXml.ReadAll:	start
+12/05/2026 01:31:53	DalXml.ReadAll:	end
+12/05/2026 01:32:05	DalXml.ReadAll:	start
+12/05/2026 01:32:05	DalXml.ReadAll:	end
+12/05/2026 01:34:10	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:34:10	C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\bin\Tools.dll.Product.ReadAll:	ReadAll count=6 filePath=C:\דבורי\שנה ב\c#\מעודכן\good_project_c-\xml\products.xml
+12/05/2026 01:34:14	DalXml.ReadAll:	start
+12/05/2026 01:34:14	DalXml.ReadAll:	end

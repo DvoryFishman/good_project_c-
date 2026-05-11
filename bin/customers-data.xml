@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Customers>
   <Customer>
-    <CustomerId>2000</CustomerId>
-    <Name>sara coen</Name>
-    <Adress>ben gorion 152</Adress>
-    <Phone>0531264589</Phone>
-  </Customer>
-  <Customer>
     <CustomerId>2001</CustomerId>
     <Name>tamar ben ari</Name>
     <Adress>savionim 12</Adress>

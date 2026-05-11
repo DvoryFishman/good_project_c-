@@ -16,18 +16,24 @@
     <ProductId>1411</ProductId>
     <Category>SLIPPERS</Category>
     <Price>80</Price>
-    <QuantityInStock>300</QuantityInStock>
+    <QuantityInStock>299</QuantityInStock>
   </Product>
   <Product>
     <ProductId>1413</ProductId>
     <Category>SHOES</Category>
     <Price>444</Price>
-    <QuantityInStock>150</QuantityInStock>
+    <QuantityInStock>149</QuantityInStock>
   </Product>
   <Product>
     <ProductId>1415</ProductId>
     <Category>SLIPPERS</Category>
     <Price>120</Price>
     <QuantityInStock>0</QuantityInStock>
+  </Product>
+  <Product>
+    <ProductId>1416</ProductId>
+    <Category>SHIRT</Category>
+    <Price>100</Price>
+    <QuantityInStock>100</QuantityInStock>
   </Product>
 </ArrayOfProduct>
